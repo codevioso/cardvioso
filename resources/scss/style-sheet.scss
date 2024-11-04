@@ -12,8 +12,7 @@
 	Table content
 
 	00 root
-
-    03 home
+    01 game
 
 --- --- --- --- --- --- --- --- --- --- --- --- --- */
 
@@ -26,7 +25,7 @@
 @import "components/00_root";
 
 /* --- --- --- --- --- --- --- --- --- ---
---- --- --- 12 home
+--- --- --- 01 game
 --- --- --- --- --- --- --- --- --- --- */
 
-@import "widget/home";
+@import "widget/game";

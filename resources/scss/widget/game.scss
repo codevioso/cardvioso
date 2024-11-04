@@ -1,4 +1,4 @@
-.home {
+.game {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -70,7 +70,6 @@
                             width: 21px;
                             height: 21px;
                         }
-
                     }
                 }
 
@@ -84,44 +83,31 @@
                             width: 35px;
                             height: 35px;
                         }
-
                     }
                 }
-
             }
-
         }
-
     }
 
-}
+    .card-shake {
+        animation: shake 0.25s ease-in-out;
+    }
 
-.card-shake {
-    animation: shake 0.25s ease-in-out;
-}
-
-@keyframes shake {
-    0%, 100%{
-        transform: translateX(0);
+    @keyframes shake {
+        0%, 100%{
+            transform: translateX(0);
+        }
+        20%{
+            transform: translateX(-13px);
+        }
+        40%{
+            transform: translateX(13px);
+        }
+        60%{
+            transform: translateX(-8px);
+        }
+        80%{
+            transform: translateX(8px);
+        }
     }
-    20%{
-        transform: translateX(-13px);
-    }
-    40%{
-        transform: translateX(13px);
-    }
-    60%{
-        transform: translateX(-8px);
-    }
-    80%{
-        transform: translateX(8px);
-    }
-}
-
-._rotateY180deg {
-    transform: rotateY(-180deg)
-}
-
-._rotateY0deg {
-    transform: rotateY(0deg)
 }

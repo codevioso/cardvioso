@@ -1,6 +1,6 @@
 <template>
 
-    <div class="home">
+    <div class="game">
         <div class="card">
             <div v-for="(each, index) in cardData" :key="index" class="card-box" @click="rotate(index)">
                 <div class="card-view" :id="'front'+index">
@@ -20,6 +20,7 @@
 export default {
     data(){
         return {
+            // Data Properties
             cardData: [
                 { id: '0', frontSrc: '/images/que_icon.svg', backSrc: '/images/img-1.png' },
                 { id: '1', frontSrc: '/images/que_icon.svg', backSrc: '/images/img-2.png' },
@@ -70,19 +71,12 @@ export default {
             frontCard.style.transform = 'rotateY(-180deg)';
             backCard.style.transform = 'rotateY(0)';
 
+            // take card image index
             if(this.firstImage === null) {
-
-                // take card image one of index
                 this.firstImage = index;
-
             } else {
-
-                // take card image two of index
                 this.secondImage = index;
-
-                // match the card
                 this.matchCard();
-
             }
 
         },
@@ -94,18 +88,13 @@ export default {
             const cardMatchOne = this.cardData[this.firstImage].backSrc;
             const cardMatchTwo = this.cardData[this.secondImage].backSrc;
 
+            // card image match or not match
             if(cardMatchOne === cardMatchTwo) {
-
-                // when all card are match
                 this.resetBoard();
-
             } else {
-
-                // when card not match with image
                 setTimeout(() => {
                     this.flipCard();
                 }, 300)
-
             }
 
         },
@@ -121,9 +110,9 @@ export default {
 
             // take card one and two apply style rotateY
             firstCardFront.style.transform = 'rotateY(0)';
-            firstCardBack.style.transform = 'rotateY(180deg)';
+            firstCardBack.style.transform = 'rotateY(-180deg)';
             secondCardFront.style.transform = 'rotateY(0)';
-            secondCardBack.style.transform = 'rotateY(180deg)';
+            secondCardBack.style.transform = 'rotateY(-180deg)';
         },
 
         // Function of shake card box
@@ -135,22 +124,19 @@ export default {
             let secondCardFront = document.querySelector(`#front${this.secondImage}`);
             let secondCardBack = document.querySelector(`#back${this.secondImage}`);
 
-
-                // take card one and two apply class list card shake
-                firstCardFront.classList.add('card-shake');
-                firstCardBack.classList.add('card-shake');
-                secondCardFront.classList.add('card-shake');
-                secondCardBack.classList.add('card-shake');
+            // take card one and two apply class list card shake
+            firstCardFront.classList.add('card-shake');
+            firstCardBack.classList.add('card-shake');
+            secondCardFront.classList.add('card-shake');
+            secondCardBack.classList.add('card-shake');
 
         },
 
         // Function of flip card
         flipCard() {
             this.shakeCardBox();
-            setTimeout(() => {
-                this.resetRotate()
-                this.resetBoard();
-            }, 500);
+            this.resetRotate()
+            this.resetBoard();
         },
 
         // Function of reset board card
