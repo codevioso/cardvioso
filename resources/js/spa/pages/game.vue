@@ -44,9 +44,17 @@ export default {
         }
     },
     mounted() {
-
+        this.shuffleCard();
     },
     methods: {
+
+        // Function of shuffle card when come from another route ( rand placement )
+        shuffleCard() {
+            for (let i = 0; i < this.cardData.length; i++) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [this.cardData[i], this.cardData[j]] = [this.cardData[j], this.cardData[i]];
+            }
+        },
 
         // Function of rotate image which is inside of card
         rotate(index) {
