@@ -3,7 +3,7 @@
     <div class="game">
         <div class="card">
             <div v-for="(each, index) in cardData" :key="index" class="card-box" @click="rotate(index)">
-                <div class="card-view" :id="'front'+index">
+                <div class="card-view front" :id="'front'+index">
                     <img :src="each.frontSrc" alt="image-front">
                 </div>
                 <div class="card-view back" :id="'back'+index">
