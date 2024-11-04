@@ -1,0 +1,46 @@
+/* --- --- --- --- --- --- --- --- --- --- --- --- ---
+
+    Theme Name  :   cardvioso
+	Theme URI   :   https://cardvioso.thethemeai.com
+	Description :   The Multi-Purpose One Page Template
+	Author      :   Ridwanul Hafiz
+	Author URI  :   https://github.com/codevioso/cardvioso
+	Version     :   1.0
+
+	--- --- --- --- --- --- --- --- --- --- --- --- ---
+
+	Table content
+
+	00 root
+	01 background
+	02 button
+
+    03 home
+
+--- --- --- --- --- --- --- --- --- --- --- --- --- */
+
+
+
+/* --- --- --- --- --- --- --- --- --- ---
+--- --- --- 00 root
+--- --- --- --- --- --- --- --- --- --- */
+
+@import "components/00_root";
+
+/* --- --- --- --- --- --- --- --- --- ---
+--- --- --- 01 background
+--- --- --- --- --- --- --- --- --- --- */
+
+@import "components/01_background";
+
+/* --- --- --- --- --- --- --- --- --- ---
+--- --- --- 04 button
+--- --- --- --- --- --- --- --- --- --- */
+
+@import "components/02_buttons";
+
+/* --- --- --- --- --- --- --- --- --- ---
+--- --- --- 12 home
+--- --- --- --- --- --- --- --- --- --- */
+
+@import "widget/home";
