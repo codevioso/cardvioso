@@ -3,10 +3,13 @@
      <head>
          {{-- Title --}}
          <title> Cardvioso </title>
+
          {{-- Meta resources --}}
          @include('component.meta')
+
          {{-- Style sheet --}}
          @vite('resources/scss/style-sheet.scss')
+
          {{-- App config --}}
          @vite('resources/js/spa/app.js')
      </head>
