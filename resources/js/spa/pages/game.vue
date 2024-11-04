@@ -92,9 +92,10 @@ export default {
             if(cardMatchOne === cardMatchTwo) {
                 this.resetBoard();
             } else {
+                this.shakeCardBox();
                 setTimeout(() => {
                     this.flipCard();
-                }, 300)
+                }, 500)
             }
 
         },
@@ -134,8 +135,7 @@ export default {
 
         // Function of flip card
         flipCard() {
-            this.shakeCardBox();
-            this.resetRotate()
+            this.resetRotate();
             this.resetBoard();
         },
 
